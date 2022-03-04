@@ -24,8 +24,8 @@ defmodule Snap.ResponseError do
           raw: map() | nil
         }
 
-  def exception_from_json(json) do
-    attrs = build(json)
+  def exception_from_response(response) do
+    attrs = build(response)
     struct(__MODULE__, attrs)
   end
 
